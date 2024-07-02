@@ -11,7 +11,7 @@ function App() {
       <section className="section">
         <div className="starter">
           <h1>
-            Notifications <span></span>
+            Notifications <span>{notifications.length}</span>
           </h1>
           <span className="all-read">Mark all as read</span>
         </div>
@@ -28,8 +28,14 @@ function App() {
                   {notification.post ? (
                     <span className="post">{notification.post}</span>
                   ) : null}
+                  {notification.groupName ? (
+                    <span className="group-name">{notification.groupName}</span>
+                  ) : null}
                   <div className="circle"></div>
                   <p className="time">{notification.time}</p>
+                  {notification.text ? (
+                    <div className="text">{notification.text}</div>
+                  ) : null}
                 </div>
               </div>
             );

@@ -38,7 +38,6 @@ main {
   padding: 1.6rem 2.7rem 1.6rem 1.6rem;
   margin-bottom: 1rem;
   display: flex;
-  cursor: pointer;
 }
 
 .notification-div img {
@@ -63,6 +62,12 @@ main {
   font-weight: 700;
   margin-left: 0.6rem;
 }
+.group-name {
+  margin-left: 0.6rem;
+  color: var(--1---Blue, #0a327b);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
 .circle {
   display: inline-block;
   width: 0.8rem;
@@ -75,4 +80,15 @@ main {
   color: var(--5---Grey-Blue, #939cad);
   font-size: 1.4rem;
   font-weight: 500;
+}
+.text {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--7---Very-Light-Grey-Blue, #dde7ee);
+  background: var(--9---White, #fff);
+  color: var(--4---Dark-Grey-Blue, #5e6778);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.6rem;
+  margin: 1.2rem 0 1.2rem;
 }
