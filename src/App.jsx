@@ -6,6 +6,8 @@ import "./App.css";
 function App() {
   const [notifications, setNotifications] = useState(data);
 
+  const counter = notifications.filter((notification) => !notification.isRead);
+
   const read = (id) => {
     const updatedNotifications = notifications.map((notification) => {
       if (notification.id === id) {
@@ -28,7 +30,7 @@ function App() {
       <section className="section">
         <div className="starter">
           <h1>
-            Notifications <span>{notifications.length}</span>
+            Notifications <span>{counter.length}</span>
           </h1>
           <span onClick={markAllAsRead} className="all-read">
             Mark all as read
