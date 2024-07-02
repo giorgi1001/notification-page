@@ -6,6 +6,16 @@ import "./App.css";
 function App() {
   const [notifications, setNotifications] = useState(data);
 
+  const read = (id) => {
+    const updatedNotifications = notifications.map((notification) => {
+      if (notification.id === id) {
+        return { ...notification, isRead: true };
+      }
+      return notification;
+    });
+    setNotifications(updatedNotifications);
+  };
+
   return (
     <>
       <section className="section">
@@ -19,7 +29,14 @@ function App() {
         <main>
           {notifications.map((notification) => {
             return (
-              <div key={notification.id} className="notification-div">
+              <div
+                style={{
+                  backgroundColor: !notification.isRead ? "#F7FAFD" : "",
+                }}
+                key={notification.id}
+                className="notification-div"
+                onClick={() => read(notification.id)}
+              >
                 <img src={notification.profilePic} alt="profile picture" />
 
                 <div>
@@ -31,7 +48,7 @@ function App() {
                   {notification.groupName ? (
                     <span className="group-name">{notification.groupName}</span>
                   ) : null}
-                  <div className="circle"></div>
+                  {!notification.isRead ? <div className="circle"></div> : null}
                   <p className="time">{notification.time}</p>
                   {notification.text ? (
                     <div className="text">{notification.text}</div>
