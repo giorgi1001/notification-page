@@ -14,7 +14,7 @@ h1 span {
   text-align: center;
   width: 3.2rem;
   height: 2.5rem;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   background: var(--1---Blue, #0a327b);
   color: white;
   margin-left: 0.9rem;
@@ -24,4 +24,7 @@ h1 span {
   font-size: 1.4rem;
   font-weight: 500;
   cursor: pointer;
+}
+.all-read:hover {
+  color: #0a327b;
 }

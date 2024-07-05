@@ -25,7 +25,11 @@ export default function Notifications({
         className="notification-div"
         onClick={() => read(notification.id)}
       >
-        <img src={notification.profilePic} alt="profile picture" />
+        <img
+          className="profile-picture"
+          src={notification.profilePic}
+          alt="profile picture"
+        />
 
         <div>
           <span className="username">{notification.username}</span>
@@ -42,6 +46,13 @@ export default function Notifications({
             <div className="text">{notification.text}</div>
           ) : null}
         </div>
+        {notification.userPicture ? (
+          <img
+            className="user-picture"
+            src={notification.userPicture}
+            alt="user picture"
+          />
+        ) : null}
       </div>
     </>
   );
