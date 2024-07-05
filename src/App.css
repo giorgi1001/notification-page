@@ -7,3 +7,9 @@
 main {
   background: var(--9---White, #fff);
 }
+@media only screen and (min-width: 70rem) {
+  .section {
+    width: 73rem;
+    padding: 3.3rem 3rem 0 3rem;
+  }
+}
